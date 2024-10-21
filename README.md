@@ -77,9 +77,16 @@ I designed the circuit board in [KiCad](https://www.kicad.org/), properly positi
 
 Since the circuit board was going to be the body of the device, I wanted it to look good. I neatly aligned the traces, rounded the corners, made a logo, and ordered it in yellow.
 
-<!-- ### Assembly
+### Assembly
 
 After the PCB and electrical components had arrived, it was time to get building. Assembly consisted of:
 
-* Soldering all electrical components on, such as the breath sensor, small SMD capacitors, headers, and mechanical switches.
-* Bending brackets  -->
+* Separating the 5-part PCB and sanding the edges
+* Soldering all electrical components onto the circuit board, such as the breath sensor, small SMD capacitors, headers, and mechanical switches
+* Bending brackets - *In order to attach the smaller PCBs at specific angles, I had to bend right angle brackets by hand. I had to experiment with a combination of hammering them and using pliers, or else they wouldn't bend properly.*
+* Applying conformal coating - *After soldering everything on, I applied conformal coating to the back of the PCB so that it would protect the electronics. Because I used a brush, the coat doesn't look very even, however I don't have a way to remove it and I don't want to make it worse by adding another coat.*
+* Screwing everything together
+
+### Programming
+
+I used the [MIDIUSB Arduino library](https://github.com/arduino-libraries/MIDIUSB) to send MIDI signals from the Arduino. If the breath sensor reading is above a certain threshold, it sends a MIDI signal of the current note pressed. In addition, it constantly updates the mod wheel based on the sensor reading so that you can map the amount of air blowing to whatever you want in your software synth.
