@@ -65,6 +65,8 @@ I designed each key to have as similar of a shape as possible to a real sax. Som
 
 Some keys, such as the G sharp key and bis key have tabs so that when another key is pressed next to it, it will also get pressed. This has no function, but makes it feel more realistic.
 
+<img src="https://github.com/user-attachments/assets/e8589aa1-e539-4f74-b6b0-470d81665e80" style="width: 400px;"/>
+
 On some keys, the stem (where it connects to the switch) is offset so that the key can be in the ideal position.
 
 ### Electrical Design
@@ -89,4 +91,4 @@ After the PCB and electrical components had arrived, it was time to get building
 
 ### Programming
 
-I used the [MIDIUSB Arduino library](https://github.com/arduino-libraries/MIDIUSB) to send MIDI signals from the Arduino. If the breath sensor reading is above a certain threshold, it sends a MIDI signal of the current note pressed. In addition, it constantly updates the mod wheel based on the sensor reading so that you can map the amount of air blowing to whatever you want in your software synth.
+I used the [MIDIUSB Arduino library](https://github.com/arduino-libraries/MIDIUSB) to send MIDI signals from the Arduino. If the breath sensor reading is above a certain threshold, it sends a MIDI signal of the current note pressed with the velocity based on the sensor reading. In addition, it sets the mod wheel based on the sensor reading so that you can map the amount of air blowing to whatever you want in your software synth.
