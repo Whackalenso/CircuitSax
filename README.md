@@ -2,8 +2,16 @@
 
 The Circuit Sax is a saxophone MIDI controller. It lets you play any software instrument you’d like using saxophone fingerings, allowing you to practice without disturbing others, create music in any DAW, and even perform with it. It’s designed to feel as close to a regular saxophone as possible so that it won’t feel unfamiliar to the player.
 
-<img src="./images/standing.jpg" style="height: 800px">
-<img src="./images/back.jpg" style="height: 600px">
+<div style="display:flex;flex-direction:row;">
+  <img src="./images/standing.jpg" style="height: 600px">
+  <img src="./images/back.jpg" style="height: 600px">
+  
+</div>
+
+https://github.com/user-attachments/assets/63f0f66c-cf19-42e7-976a-ba243b47ed39
+
+
+
 
 ### Features
 
