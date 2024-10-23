@@ -5,8 +5,6 @@ The Circuit Sax is a saxophone MIDI controller. It lets you play any software in
 <img src="./images/standing.jpg" style="height: 800px">
 <img src="./images/back.jpg" style="height: 600px">
 
-https://raw.githubusercontent.com/Whackalenso/CircuitSax/main/videos/demo1.mp4
-
 ### Features
 
 - Breath input to trigger/release notes and control the **Mod Wheel** to map to any synth parameter
