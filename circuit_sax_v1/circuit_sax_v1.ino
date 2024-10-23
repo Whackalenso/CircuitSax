@@ -1,14 +1,10 @@
 #include "MIDIUSB.h"
-// #include "PitchToNote.h"
 #include <math.h>
 
 const int sensorPin = A5;
-// bool lastReading = false;
-// bool blowState = false;
-// unsigned long lastDebounceTime;
-// const int debounceDelay = 2;
 bool isBlowing = false;
-const int threshold = 75;
+const int min_air = 90;
+const int max_air = 400;
 const int modWheel = 1;
 
 const int palmKeys[3] = {4, 5, 6};                                     // D, D#, F
@@ -24,12 +20,8 @@ const int bisKey = 7;
 const int baseOctave = 4;
 int activeNote = CSHARP(baseOctave);
 int currentNote = activeNote;
-const int timeToChangeNote = 0;
+const int timeToChangeNote = 10;
 int lastChangedNote = -1 * timeToChangeNote;
-
-// int calibrationTime = 10000;
-// int threshold;
-// long sampleCount = 0;
 
 // list of regular keys (6 pearl keys + low c) pressed, if break in keys then thats the note
 // example (list of keys pressed):
@@ -48,13 +40,36 @@ void setup()
       pinMode(i, INPUT_PULLUP);
     }
   }
+
+  // Serial.begin(9600);
+}
+
+int getVelocity(int sensorReading, float x2, float y2)
+{
+
+  return constrain(0.5 * (sensorReading - min_air), 0, 127);
+
+  // float x1 = min_air;
+  // float y1 = 0;
+  // float x3 = max_air;
+  // float y3 = 127;
+
+  // float a = ((y1 * (x2 - x3)) + (y2 * (x3 - x1)) + (y3 * (x1 - x2))) /
+  //           ((x1 * (x2 - x3) * (x2 - x3)) + (x2 * (x3 - x1) * (x3 - x1)) + (x3 * (x1 - x2) * (x1 - x2)));
+
+  // float b = ((y1 - y2) - a * (x1 * x1 - x2 * x2)) / (x1 - x2);
+
+  // float c = y1 - a * x1 * x1 - b * x1;
+
+  // return constrain(a * pow(sensorReading, 2) + b * sensorReading + c, 0, 127);
 }
 
 void loop()
 {
   int sensorReading = analogRead(sensorPin);
-  int velocity = constrain(sensorReading - threshold, 0, 64) * 2;
+  int velocity = getVelocity(sensorReading, 200, 100); // constrain(0.5 * (sensorReading - min_air), 0, 127);
   controlChange(0, modWheel, velocity);
+  // Serial.println(String(velocity) + " " + String(sensorReading));
 
   // bool blowStateChanged = false;
 
@@ -176,49 +191,51 @@ void loop()
     }
   }
 
-  // for (int i = 0; i < 3; i++) {
-  //   Serial.print(digitalRead(palmKeys[i]));
+  // if ((velocity > 0) != isBlowing || note != activeNote)
+  // {
+  //   isBlowing = velocity > 0;
+  //   noteOff(0, activeNote, 0);
+  //   activeNote = note;
+  //   noteOn(0, activeNote, isBlowing ? velocity : 0);
+  //   MidiUSB.flush();
   // }
-  // Serial.print("\n");
+  // else if (!isBlowing)
+  // { // just to make sure notes turn off
+  //   for (int i = 46; i <= 77; i++)
+  //   { // update when adding altissimo
+  //     noteOff(0, i, 0);
+  //   }
+  //   MidiUSB.flush();
+  // }
+  if (note != currentNote)
+  {
+    lastChangedNote = millis();
+    currentNote = note;
+  }
 
-  if ((velocity > 0) != isBlowing || note != activeNote)
+  if ((millis() - lastChangedNote >= timeToChangeNote) && (currentNote != activeNote))
+  {
+    if (isBlowing)
+    {
+      noteOff(0, activeNote, 0);
+      noteOn(0, currentNote, velocity);
+      MidiUSB.flush();
+    }
+    activeNote = currentNote;
+  }
+
+  if ((velocity > 0) != isBlowing)
   {
     isBlowing = velocity > 0;
-    noteOff(0, activeNote, 0);
-    activeNote = note;
-    noteOn(0, activeNote, isBlowing ? 127 : 0);
-    MidiUSB.flush();
-  }
-  else if (!isBlowing)
-  { // just to make sure notes turn off
-    for (int i = 46; i <= 77; i++)
-    { // update when adding altissimo
-      noteOff(0, i, 0);
+    if (isBlowing)
+    {
+      noteOn(0, activeNote, velocity);
     }
-    MidiUSB.flush();
+    else
+    {
+      noteOff(0, activeNote, 0);
+    }
   }
-  // if (note != currentNote) {
-  //   lastChangedNote = millis();
-  //   currentNote = note;
-  // }
-
-  // if ((millis() - lastChangedNote >= timeToChangeNote) && (currentNote != activeNote)) {
-  //   if (isBlowing) {
-  //     noteOff(0, activeNote, 0);
-  //     noteOn(0, currentNote, 127);
-  //     MidiUSB.flush();
-  //   }
-  //   activeNote = currentNote;
-  // }
-
-  // if ((velocity > 0) != isBlowing) {
-  //   isBlowing = velocity > 0;
-  //   if (isBlowing) {
-  //     noteOn(0, activeNote, 127);
-  //   } else {
-  //     noteOff(0, activeNote, 0);
-  //   }
-  // }
 }
 
 // First parameter is the event type (0x0B = control change).

@@ -4,6 +4,9 @@ The Circuit Sax is a saxophone MIDI controller. It lets you play any software in
 
 <img src="./images/standing.jpg" style="height: 800px">
 <img src="./images/back.jpg" style="height: 600px">
+<video width="300px" controls>
+    <source src="./videos/demo1.mp4" type="video/mp4">
+</video>
 
 ### Features
 
