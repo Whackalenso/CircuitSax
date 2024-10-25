@@ -10,9 +10,6 @@ The Circuit Sax is a saxophone MIDI controller. It lets you play any software in
 
 https://github.com/user-attachments/assets/63f0f66c-cf19-42e7-976a-ba243b47ed39
 
-
-
-
 ### Features
 
 - Breath input to trigger/release notes and control the **Mod Wheel** to map to any synth parameter
@@ -26,6 +23,9 @@ https://github.com/user-attachments/assets/63f0f66c-cf19-42e7-976a-ba243b47ed39
 - **Arduino Micro** - Microcontroller board for sending MIDI output
 - **Custom 3D Prints** - For the mouthpiece, thumb rests, and keys
 - **Custom PCB** - Circuit board used as the body
+
+> ### Can be a Nintendo Switch controller, too!
+>[Circuit-Sax-Switch-Controls](https://github.com/Whackalenso/Circuit-Sax-Switch-Controls/) lets you use the Circuit Sax as a controller designed for Smash Bros by plugging it into a switch via USB.
 
 ## The Whole Process
 
