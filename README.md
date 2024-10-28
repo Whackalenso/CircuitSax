@@ -40,16 +40,16 @@ https://github.com/user-attachments/assets/63f0f66c-cf19-42e7-976a-ba243b47ed39
 
 <img src="./images/prototype.jpg" style="height: 500px; margin: 20px 0">
 
-After originally making a prototype out of breadboards (shown above), I wanted to make a new version using a PCB as the body, mechanical switches for buttons, and 3D prints for the mouthpiece, thumb rest, and keys. However, I wasn't sure what I would do about the side keys. After finding [this project](https://github.com/cardonabits/haxo-hw) by Javier Cardona, I decided I would do something similar and attach additional smaller PCBs to the sides with angle brackets and electrical header pins.
+After originally making a prototype out of breadboards (shown above), I wanted to make a new version using a PCB as the body, mechanical switches for buttons, and 3D prints for the mouthpiece, thumb rest, and keys. [The Haxophone](https://github.com/cardonabits/haxo-hw) by Javier Cardona was a major inspiration for the overall design concept of using a PCB as the body. I would recommend checking it out. 
 
-In contrast to the [Haxophone](https://github.com/cardonabits/haxo-hw), I wanted to position the keys to be more accurate. In CAD, I positioned all the keys and angled the side PCBs based on measurements from my soprano sax. In order to make sure everything would fit properly, I spent months modeling the entire thing, including mechanical switches, 3D prints, brackets, nuts, bolts, and electrical components.
+In contrast to the Haxophone, I wanted to design the keys and key layout to be as accurate as possible. In CAD, I positioned all the keys and angled the side PCBs based on measurements from my soprano sax. In order to make sure everything would fit properly, I spent months modeling the entire thing, including mechanical switches, 3D prints, brackets, nuts, bolts, and electrical components.
 
 <img src="./images/front.png" style="height: 350px">
 <img src="./images/back.png" style="height: 350px">
 
 ### Choosing Components
 
-- For the breath sensor, I chose a [MPXV5010GP pressure sensor](https://www.digikey.com/en/products/detail/nxp-usa-inc/MPXV5010GP/951847?s=N4IgTCBcDaILYAcAeA3ArABgIwYOYJAF0BfIA) since that was what many other similar projects use, so I assumed it would do what I needed.
+- For the breath sensor, I chose a [MPXV5010GP pressure sensor](https://www.digikey.com/en/products/detail/nxp-usa-inc/MPXV5010GP/951847?s=N4IgTCBcDaILYAcAeA3ArABgIwYOYJAF0BfIA) since that seemed like the popular choice for many other projects like this.
 - For the microcontroller, I decided to use an [Arduino Micro](https://store.arduino.cc/products/arduino-micro) because I already had one and its atmega32u4 chip would work for sending USB output. I would attach it to the PCB with header pins.
 - For the mechanical switches, I chose [Haimu Heartbeat Silent Linear Switches](https://cannonkeys.com/products/haimu-heartbeat-silent-linear-switch?srsltid=AfmBOoo-FxAV9BJslixNNQ3mZ6u7veaNx8jfjfWYgJqzr-3P1V7ygZ23) because silent switches wouldn't disturb others, and the heavier spring weight would be more similar to a real saxophone.
 - For the electrical connections to other PCBs (for the side keys), I got various header pins and sockets that I would have to bend in specific angles in order to fit properly. I figured that if they broke, I would just use wires as a plan B.
@@ -112,7 +112,7 @@ I ordered the PCB from [JLCPCB](https://jlcpcb.com/). After the PCB and electric
 - Separating the 5-part PCB and sanding the edges
 - Soldering all electrical components onto the circuit board, such as the breath sensor, small SMD capacitors, headers, and mechanical switches
 - Bending brackets - _In order to attach the smaller PCBs at specific angles, I had to bend right angle brackets by hand. I had to experiment with a combination of hammering them and using pliers, or else they wouldn't bend properly._
-- Applying conformal coating - _After soldering everything on, I applied conformal coating to the back of the PCB so that it would protect the electronics. Because I used a brush, the coat doesn't look very even, however I don't have a way to remove it and I don't want to make it worse by adding another coat._
+- Applying conformal coating - _After soldering everything on, I applied conformal coating to the back of the PCB so that it would protect the electronics._
 - Screwing everything together
 
 <img src="./images/assembly2.jpg" style="margin: 25px 0; height: 600px">
