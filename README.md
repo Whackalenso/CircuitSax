@@ -27,6 +27,10 @@ https://github.com/user-attachments/assets/63f0f66c-cf19-42e7-976a-ba243b47ed39
 > ### Can be a Nintendo Switch controller, too!
 >[Circuit-Sax-Switch-Controls](https://github.com/Whackalenso/Circuit-Sax-Switch-Controls/) lets you use the Circuit Sax as a controller designed for Smash Bros by plugging it into a switch via USB.
 
+### Acknowledgements
+
+[The Haxophone](https://github.com/cardonabits/haxo-hw) by Javier Cardona was a major inspiration for the overall design concept of using a PCB as the body. I would recommend checking it out. 
+
 ## The Whole Process
 
 - [Overall Design](#overall-design)
@@ -40,9 +44,9 @@ https://github.com/user-attachments/assets/63f0f66c-cf19-42e7-976a-ba243b47ed39
 
 <img src="./images/prototype.jpg" style="height: 500px; margin: 20px 0">
 
-After originally making a prototype out of breadboards (shown above), I wanted to make a new version using a PCB as the body, mechanical switches for buttons, and 3D prints for the mouthpiece, thumb rest, and keys. [The Haxophone](https://github.com/cardonabits/haxo-hw) by Javier Cardona was a major inspiration for the overall design concept of using a PCB as the body. I would recommend checking it out. 
+After originally making a prototype out of breadboards (shown above), I wanted to make a new version using a PCB as the body and 3D prints for the mouthpiece and thumb rest. Although many EWIs use touch capacitive buttons for the keys, I decided to use mechanical key switches and custom keycaps instead so that it would feel more realistic. 
 
-In contrast to the Haxophone, I wanted to design the keys and key layout to be as accurate as possible. In CAD, I positioned all the keys and angled the side PCBs based on measurements from my soprano sax. In order to make sure everything would fit properly, I spent months modeling the entire thing, including mechanical switches, 3D prints, brackets, nuts, bolts, and electrical components.
+In order for the key layout to be as accurate as possible and for everything to fit properly, I spent months modeling the entire thing in CAD. I positioned and angled all the keys according to measurements from my soprano sax, modeled the 3D prints, and made sure nothing would interfere with the brackets, nuts, bolts, and electrical components.
 
 <img src="./images/front.png" style="height: 350px">
 <img src="./images/back.png" style="height: 350px">
