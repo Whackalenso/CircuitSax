@@ -10,17 +10,13 @@ Circuit Sax is in its second version. See [Circuit Sax v1](v1) for the original 
 
 _Here's me playing the Circuit Sax at a jam session at Jupiter Pizza in Berkeley_
 
-<video width="300px" controls>
-    <source src="./v2/videos/jupiter_compressed.mp4" type="video/mp4">
-</video>
+https://github.com/user-attachments/assets/74b87393-0f55-4b45-b789-877defe5bff4
 
 <br>
 
 _Here you can see the motion-based vibrato in action_
 
-<video width="300px" controls>
-    <source src="./v2/videos/vibrato.mp4" type="video/mp4">
-</video>
+https://github.com/user-attachments/assets/34a0cf1e-d21a-44c1-9bf7-8ff393d21c14
 
 ### Features
 
