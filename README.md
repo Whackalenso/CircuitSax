@@ -11,7 +11,7 @@ Circuit Sax is in its second version. See [Circuit Sax v1](v1) for the original 
 _Here's me playing the Circuit Sax at a jam session at Jupiter Pizza in Berkeley_
 
 <video width="300px" controls>
-    <source src="./v2/videos/jupter.mp4" type="video/mp4">
+    <source src="./v2/videos/jupter_compressed.mp4" type="video/mp4">
 </video>
 
 <br>
