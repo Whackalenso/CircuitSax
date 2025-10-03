@@ -115,6 +115,7 @@ I ordered the PCB from [JLCPCB](https://jlcpcb.com/). After the PCB and electric
 - Screwing everything together
 
 _The image below is from the assembly of version 1_
+
 <img src="./v1/images/assembly2.jpg" style="margin: 25px 0; height: 600px">
 
 ### Programming
