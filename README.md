@@ -6,6 +6,22 @@ Circuit Sax is in its second version. See [Circuit Sax v1](v1) for the original 
 
 <img src="./v2/images/front.png" style="height: 600px">
 
+<br>
+
+_Here's me playing the Circuit Sax at a jam session at Jupiter Pizza in Berkeley_
+
+<video width="300px" controls>
+    <source src="./v2/videos/jupter.mp4" type="video/mp4">
+</video>
+
+<br>
+
+_Here you can see the motion-based vibrato in action_
+
+<video width="300px" controls>
+    <source src="./v2/videos/vibrato.mp4" type="video/mp4">
+</video>
+
 ### Features
 
 - Mechanical key switches with custom keycaps meant to mimic the feel of a saxophone
@@ -96,7 +112,7 @@ The electrical design is very simple since I'm using premade Teensy and Teensy A
 
 I designed the circuit board in [KiCad](https://www.kicad.org/), properly positioning every component and sizing the board according to my CAD model.
 
-<img src="./v2/images/pcb.svg" style="height: 600px">
+<img src="./v2/images/pcb.png" style="height: 600px">
 
 #### Circuit Board Aesthetics
 
