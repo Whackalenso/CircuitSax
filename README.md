@@ -2,7 +2,7 @@
 
 The Circuit Sax is a mini electronic saxophone. Made with mechanical switches, custom 3D printed keycaps, and breath input, it’s designed to feel as close to a regular saxophone as possible. Almost anything you can play on a real saxophone, you can translate to the Circuit Sax.
 
-Circuit Sax is in its second version. See [Circuit Sax v1](v1) for the original set of features.
+Circuit Sax is in its second version. See [Circuit Sax v1](v1) for the original set of features. <i>[youtube video](https://www.youtube.com/shorts/W6cE7hNr6wc)</i>
 
 <img src="./v2/images/front.png" style="height: 600px">
 
